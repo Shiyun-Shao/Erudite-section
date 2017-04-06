@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+body {
+  background: #000;
+  overflow: hidden;
+}
+
+canvas {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#c1 {
+  opacity: 0;
+}
+
+#c2 {
+  background: #000;
+}
+
+#vvg p {
+    text-align: center;
+    font-family: Microsoft Yahei;
+    font-size: 16px;
+    color: hotpink;
+    position: relative;
+    z-index: 100;
+}
+
+#vvg ul {
+    overflow: hidden;
+    text-align: center;
+}
+
+#thumb li {
+    list-style: none;
+    float: left;
+    display: inline;
+    margin-left: 5px;
+}
+
+#gameCanvas {
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#gameCanvas li {
+    position: absolute;
+    list-style: none;
+    cursor: move;
+}
+
+#vvgBox {
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#mask {
+    position: absolute;
+    z-index: 999;
+    background: #fff;
+    left: 0;
+    top: 0;
+}
+
+#button {
+    width: 133px;
+    height: 133px;
+    background-image: url('images/play.png');
+    position: absolute;
+    z-index: 10000;
+    margin-left: -66px;
+    left: 50%;
+    margin-top: -66px;
+    top: 50%;
+}
+
+#button:hover {
+    background-position: -133px 0;
+}
+
+#textTip {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    position: relative;
+    top: -75%;
+    z-index: 1000;
+}
+
+#step {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: red;
+    font-size: 20px;
+}
+
+#imgDiy {
+    text-align: center;
+    display: none;
+}
