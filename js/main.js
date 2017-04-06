@@ -29,8 +29,8 @@ function makeGame(url) {
         //获取图片的尺寸
         imgWidth = img.width;
         imgHeight = img.height;
-        var myw = Math.floor(imgWidth / 4),
-                myh = Math.floor(imgHeight / 4);
+        var myw = Math.floor(imgWidth / 3),
+                myh = Math.floor(imgHeight / 3);
         vvgBox.style.width = imgWidth + 'px';
         vvgBox.style.height = imgHeight + 'px';
         canvas.style.width = imgWidth + 'px';
@@ -42,24 +42,21 @@ function makeGame(url) {
         // 文档碎片
         var oFragment = document.createDocumentFragment();
         //循环生成方块状态的小图，以背景的形式展现，生成16格,并添加到数组
-        for (var i = 0; i < 16; i++) {
+        for (var i = 0; i < 9; i++) {
             var li = document.createElement('li');
             li.style.width = myw + 'px';
             li.style.height = myh + 'px';
             li.style.backgroundImage = 'url(' + url + ')';
             // 计算坐标
-            if (i < 4) {//0,1,2,3 第一排
+            if (i < 3) {//0,1,2,3 第一排
                 top = 0;
                 left = i * myw;
-            } else if (i >= 4 && i < 8) {// 4,5,6,7 第二排
+            } else if (i >= 3 && i < 6) {// 4,5,6,7 第二排
                 top = myh;
-                left = (i - 4) * myw;
-            } else if (i >= 8 && i < 12) {// 8,9,10,11 第三排
+                left = (i - 3) * myw;
+            } else if (i >= 6) {// 8,9,10,11 第三排
                 top = 2 * myh;
-                left = (i - 8) * myw;
-            } else if (i >= 12) { // 12，13，14，15 第四排
-                top = 3 * myh;
-                left = (i - 12) * myw;
+                left = (i - 6) * myw;
             }
             // 记录还未打乱次序的初始ID对应的每个id的正确位置，用于比较拼图是否完成
             posArray.push([i, left, top]);

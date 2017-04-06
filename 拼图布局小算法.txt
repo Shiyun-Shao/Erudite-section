@@ -1,0 +1,13 @@
+  if (i < 4) {//0,1,2,3 第一排
+                top = 0;
+                left = i * myw;
+            } else if (i >= 4 && i < 8) {// 4,5,6,7 第二排
+                top = myh;
+                left = (i - 4) * myw;
+            } else if (i >= 8 && i < 12) {// 8,9,10,11 第三排
+                top = 2 * myh;
+                left = (i - 8) * myw;
+            } else if (i >= 12) { // 12，13，14，15 第四排
+                top = 3 * myh;
+                left = (i - 12) * myw;
+            }
