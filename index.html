@@ -8,20 +8,33 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-  <canvas id="c1"></canvas>
-  <canvas id="c2"></canvas>
+  <canvas id="c1" height="0"></canvas>
+  <canvas id="c2" height="0"></canvas>
 
 <div id="vvg">
     <p id="desTip" class="animated rubberBand ">小傻子~通过四个关卡后可以自定义图片哦~&nbsp;&nbsp;&nbsp;&nbsp;现在是第<span id="step">1</span>关</p>
-    <p id="imgDiy">填入图片地址：<input type="text" id="imgUrl"><input id="startDiy" type="button" value="开始"></p>
+    <p id="imgDiy">填入图片地址：<input type="text" id="imgUrl" placeholder="例如：小傻子.jpg">
+      <select class="" name="" id="imgNum">
+        <option value="3">简单3*3</option>
+        <option value="4">中等4*4</option>
+        <option value="5">困难5*5</option>
+        <option value="6">地狱6*6</option>
+        <option value="100">嘿嘿，碎成100块</option>
+      </select>
+      <input id="startDiy" type="button" value="开始"></p>
     <div id="vvgBox" class="animated flip">
         <ul id="gameCanvas"></ul>
     </div>
 </div>
-<video src="music.mp3" width="100px" height="50px" poster="posterimage.jpg" controls loop="loop">
+<video src="music.mp3" controls loop="loop" poster="posterimage.jpg">
 </video>
-<script type="text/javascript" src="./js/main.js"></script>
+
+
 <script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+
+
+
 
 </body>
 </html>

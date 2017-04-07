@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
 body {
-  background: #000;
-  overflow: hidden;
+  background-image: url('../images/HTML背景.jpg');
+  background-size: 100%;
+  overflow-y: : scroll;
 }
 
 canvas {
@@ -206,6 +207,24 @@ canvas {
   background: #000;
 }
 
+#imgUrl {
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+}
+#imgUrl[placeholder] {
+  font-size: 14px;
+  font-family: Microsoft Yahei;
+}
+
+#imgNum {
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: Microsoft Yahei;
+  outline: none;
+}
+
 #vvg p {
     text-align: center;
     font-family: Microsoft Yahei;
@@ -236,7 +255,7 @@ canvas {
 #gameCanvas li {
     position: absolute;
     list-style: none;
-    cursor: move;
+    cursor: pointer;
 }
 
 #vvgBox {
@@ -289,4 +308,12 @@ canvas {
 #imgDiy {
     text-align: center;
     display: none;
+}
+
+#startDiy {
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: Microsoft Yahei;
+    outline: none;
+    background-color: #fff;
 }
