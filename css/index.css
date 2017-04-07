@@ -273,19 +273,20 @@ canvas {
 }
 
 #button {
-    width: 133px;
-    height: 133px;
+    width: 182px;
+    height: 120px;
     background-image: url('../images/play.png');
     position: absolute;
     z-index: 10000;
-    margin-left: -66px;
+    margin-left: -120px;
     left: 50%;
-    margin-top: -66px;
+    margin-top: 5px;
     top: 50%;
+    opacity: .6;
 }
 
 #button:hover {
-    background-position: -133px 0;
+    opacity: 1;
 }
 
 #textTip {

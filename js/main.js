@@ -119,6 +119,41 @@
                   left = (i - 30) * myw;
                 };
                 break;
+
+                case 10 :
+                if (i < 10) {
+                  top = 0;
+                  left = i * myw;
+                } else if (i >= 10 && i < 20) {
+                  top = myh;
+                  left = (i - 10) * myw;
+                } else if (i >= 20 && i < 30) {
+                  top = 2 * myh;
+                  left = (i - 20) * myw;
+                } else if (i >= 30 && i < 40) {
+                  top = 3 * myh;
+                  left = (i - 30) * myw;
+                } else if (i >= 40 && i <50) {
+                  top = 4 * myh;
+                  left = (i - 40) * myw;
+                } else if (i >= 50 && i < 60) {
+                  top = 5 * myh;
+                  left = (i - 50) * myw;
+                } else if (i >= 60 && i < 70) {
+                  top = 6 * myh;
+                  left = (i - 60) * myw;
+                } else if (i >= 70 && i < 80) {
+                  top = 7 * myh;
+                  left = (i - 70) * myw;
+                } else if (i >= 80 && i < 90) {
+                  top = 8 * myh;
+                  left = (i - 80) * myw;
+                } else if (i >= 90) {
+                  top = 9 * myh;
+                  left = (i - 90) * myw;
+                }
+                ;
+                break;
               }
 
               // 记录还未打乱次序的初始ID对应的每个id的正确位置，用于比较拼图是否完成
@@ -356,7 +391,7 @@
           setOpacity(mask, 50);
           var playBtn = document.createElement('div');
           playBtn.id = 'button';
-          if (vvg.step < 5) {
+          if (vvg.step < 2) {
               playBtn.onclick = function () {
                   canvas.removeChild(mask);
                   vvgBox.removeChild(playBtn);
@@ -397,7 +432,11 @@
                       } else if (imgNum.value == 6) {
                           makeGame(imgUrl.value,6);
                           imgUrl.value = '';
-                      }// 这部分有BUG，获取imgNum.value传入函数，显示不出来
+                      } else if (imgNum.value == 100) {
+                          makeGame(imgUrl.value,10);
+                          imgUrl.value = '';
+                      }
+                      // 这部分有BUG，获取imgNum.value传入函数，显示不出来
                   }
               }
           }
